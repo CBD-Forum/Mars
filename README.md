@@ -1,13 +1,17 @@
 # Mars
 
-Far far away, there lives some Martians. 
-They have a story
+Far far away, there live some Martians. 
 
-(比星火更火星)
+They have a story.
 
-Team member:
-David Zhang(64099257@qq.com),
-Lekko Liu(lsttoy@163.com),
-Aaron Wu(whtech@gmail.com),
-Sunny Shu(shumin_1027@126.com),
-Cophey Cao(cophey@yeah.net)
+
+## Team member
++ David Zhang(64099257@qq.com),
+
++ Lekko Liu(lsttoy@163.com),
+
++ Aaron Wu(whtech@gmail.com),
+
++ Sunny Shu(shumin_1027@126.com),
+
++ Cophey Cao(cophey@yeah.net)
