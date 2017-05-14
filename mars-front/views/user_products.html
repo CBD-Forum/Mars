@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的理财</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/userFinancialProductsPurchase.css">
+
+</head>
+<body>
+<div class="userlog_background">
+    <img src="/images/userFinancialProductsDisplay.png" alt="">
+</div>
+<header class="container-fluid navbar-fixed-top user_top  ">
+    <div class="userLogin_top">
+        <div class="text-center col-md-6  col-sm-6 col-xs-6">
+            <h2>{{ session.login_bank }} - 个人银行</h2>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-2">
+            <p class="btn btn-success"><a style="color: white;" href="/financial_products_list">购买理财</a></p>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-2">
+            <p class="btn btn-success"><a style="color: white;" href="/user_financial_products_list">我的理财</a></p>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-2">
+            <p class="btn btn-success"><a style="color: white;" href="/mortgage_search">理财质押</a></p>
+        </div>
+    </div>
+</header>
+
+<div class="userFinancialProductsPurchase_body">
+    <div class="row text-center">
+        <div class="ufpp_body_h container text-center">
+            <img class="img-rounded" src="/images/buybtnb.png" alt="">
+            <h2 class="text-center">我的理财产品</h2>
+        </div>
+        <div style="padding-left:20%;padding-top:20px;" ;>
+            <table class="table table-bordered text-center" style="width:80%;">
+                <tr>
+                    <td class=""><h4>交易编号</h4></td>
+                    <td class=""><h4>产品编号</h4></td>
+                    <td class=""><h4>产品名称</h4></td>
+                    <td class=""><h4>产品价格(万元）</h4></td>
+                    <td class=""><h4>可质押金额</h4></td>
+                    <td class=""><h4>年化收益</h4></td>
+                    <td class=""><h4>质押操作</h4></td>
+                </tr>
+                <!-- 数据  -->
+                {% for pr in purchase_records %}
+                <tr>
+                    <td class="">
+                        <h4><a href="/mortgage_record?id={{ pr.PID }}">{{ pr.PID }}</a></h4>
+                    </td>
+                    <td class=""><h4>{{ pr.FID }}</h4></td>
+                    <td class=""><h4>{{ pr.FName }}</h4></td>
+                    <td class=""><h4>{{ pr.FAmount }}</h4></td>
+                    <td class=""><h4>{{ pr.Balance }}</h4></td>
+                    <td class=""><h4>{{ pr.FIncome }}</h4></td>
+                    <td style="vertical-align: inherit;">
+                        <button class="btn  btn-success"
+                                onclick="javascript:window.location.href='/mortgage?id={{ pr.PID }}';">质押
+                        </button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

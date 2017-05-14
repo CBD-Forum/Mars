@@ -1,0 +1,53 @@
+[
+  {
+    "Name": "火星银行",
+    "FinancialProducts": [
+      {
+        "Code": "20170001",
+        "Name": "火星理财壹号A",
+        "Price": 35,
+        "YieldRate": 6.21
+      },
+      {
+        "Code": "20170002",
+        "Name": "火星理财壹号B",
+        "Price": 15,
+        "YieldRate": 4.65
+      }
+    ]
+  },
+  {
+    "Name": "土星银行",
+    "FinancialProducts": [
+      {
+        "Code": "20170001",
+        "Name": "土星理财壹号A",
+        "Price": 35,
+        "YieldRate": 6.21
+      },
+      {
+        "Code": "20170002",
+        "Name": "土星理财壹号B",
+        "Price": 15,
+        "YieldRate": 4.65
+      }
+    ]
+  },
+  {
+    "Name": "木星银行",
+    "FinancialProducts": [
+      {
+        "Code": "20170001",
+        "Name": "木星理财壹号A",
+        "Price": 35,
+        "YieldRate": 6.21
+      },
+      {
+        "Code": "20170002",
+        "Name": "木星理财壹号B",
+        "Price": 15,
+        "YieldRate": 4.65
+      }
+    ]
+  }
+]

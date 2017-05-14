@@ -1,0 +1,43 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    |     
+    title userLogin
+    |     
+    link(rel='stylesheet', href='css/bootstrap.min.css')
+    |     
+    link(rel='stylesheet', href='css/userLogin.css')
+  body
+    .userlog_background
+      img(src='images/userbackground.jpg')
+    header.container-fluid.navbar-fixed-top.user_top
+      .userLogin_top
+        .text-center
+          h2 &#x706B;&#x661F;&#x94F6;&#x884C;&#x661F;&#x706B;&#x8DEF;&#x652F;&#x884C;
+    // top 结束！
+    .container.userLogin_body
+      .text-center
+        .form-group_in.userLogin_body_in
+          input.form-control(type='text', placeholder='文本输入')
+        // <input style=""  class="btn-success btn form-group_inn   " type="file" onchange="pickcert(this.files)" />
+        h4.file.btn.btn-success(href='javascript:;', style='font-size: 20px; ')
+          | &#x9009;&#x62E9;&#x6587;&#x4EF6;
+          input(style='margin-top: -20px; color: #ffffff; ', type='file', name='', onchange='pickcert(this.files)')
+      // 测试点击跳转
+      button.btn.btn-success.text-center(onclick='window.open("userFinancialProductsPurchase.html")')
+        | &#x70B9;&#x51FB;&#x8DF3;&#x8F6C;
+      // 测试点击跳转
+  script(type='text/javascript', src='js/jquery-1.11.1.min.js')
+  script(type='text/javascript').
+    function pickcert(files) {
+    if (files.length) {
+    const file = files[0];
+    const reader = new FileReader();//new一个FileReader实例
+    reader.readAsText(file);
+    reader.onload = function () {
+    cert = this.result;
+    console.log("cert content:" + cert)
+    }
+    }
+    }

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>司法监管查询</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/userFinancialProductsPurchase.css">
+
+</head>
+<body>
+<div class="userlog_background">
+    <img src="images/judicialTransactionTracking.png" alt="">
+</div>
+<header class="container-fluid navbar-fixed-top user_top  ">
+    <div class="userLogin_top">
+        <div class="text-center col-md-8  col-sm-8 col-xs-6">
+            <h2>司法监管查询</h2>
+        </div>
+    </div>
+</header>
+<!--top 结束！-->
+
+<div class="userFinancialProductsPurchase_body">
+    <div class="ufpp_body_h container text-center">
+        <img class="img-rounded" src="images/buybtnb.png" alt="">
+        <h2 class="text-center">司法监管</h2>
+    </div>
+    <div style="padding-left:20%;padding-top:20px;" ;>
+        <table class="table table-bordered text-center" style="width:80%;">
+            <tr>
+                <td class=""><h4>用户</h4></td>
+                <td class=""><h4>数据追踪</h4></td>
+            </tr>
+            {% for d in data %}
+            <tr>
+                <td class=""><h4>{{ d.UserID }}</h4></td>
+                <td class="">
+                    {% for p in d.PurchaseRecord %}
+                    <h4><p>于 {{p.FBank}} 购买 {{p.FName}}  {{p.FAmount}}万,剩余{{p.Balance}}万元;</p></h4>
+                    <h5>
+                        {% for m in p.MortgageRecords %}
+                        <div style="color:orange;">
+                            质押至 {{ m.MBank|bank }} {{m.MAmount}}万元
+                            {% if m.Status == 2 %}
+                            ，质押成功
+                            {% elseif m.Status == 1 %}
+                            ，未审核
+                            {% endif %}
+                        </div>
+                        {% endfor %}
+                    </h5>
+                    {% endfor %}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+<footer>
+    <!---->
+</footer>
+</div>
+</body>
+</html>

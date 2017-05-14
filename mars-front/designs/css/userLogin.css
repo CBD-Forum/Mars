@@ -1,0 +1,124 @@
+.userlog_background{
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index:-1;
+
+}
+.userlog_background img{
+    height:100%;width:100%;
+}
+.userLogin_top{
+    margin-left: -2%;
+    margin-top: -2%;
+    height: 70px;
+    color: #ffffff;
+    width: 110%;
+    /*
+    background: url("../images/logintop.png");
+    */
+    background-color:#14304D;
+}
+
+.userLogin_top h2{  padding-top:1.5%;  padding-right:5%;  }
+.userLogin_top p{  font-size: 15px;  margin-top: 35px;; }
+.userLogin_body_in{  color: #ffffff;  font-size: 20px;  margin-top: 30%; margin-left: 35%;
+
+}
+.userLogin_body_in input{background-color:#0A649E;height: 50px; width:65%; color: #ffffff; font-size: 20px; }
+@media screen and (min-width: 1200px) {
+    .userLogin_body_in input{
+        width:75.5%;margin-left:-29px;
+    }
+}
+@media screen and (max-width: 1201px) {
+    .userLogin_body_in input{
+        width:64.5%;
+    }
+}
+@media screen and (max-width: 901px) {
+    .userLogin_top h2{font-size: 20px;font-weight:bold;padding-top:3%; }
+    .userLogin_body_in{margin-top: 40%; margin-left: 25%; }
+    .userLogin_top{  margin-top: -3%;  }
+    .userLogin_body_in input{
+        width:130%;margin-left:-29px;
+    }
+
+
+
+}
+/* 设置了浏览器宽度不大于901px时  */
+
+@media screen and (max-width: 500px) {
+    .userLogin_top h2{font-size: 16px;font-weight:bold; padding-top:9%; }
+    .userLogin_body_in{margin-top: 80%; font-size:10px; margin-left: 12%;  }
+    .userLogin_top{  margin-top: -9%;margin-left: -5%;  }
+    .userLogin_body_in input{
+        width:100%;margin-left:-29px;
+    }
+    .userLogin_top p{  font-size: 8px;  margin-top: 35px; margin-left: -10px;background-color:#14304D;  }
+}
+
+.form-group_in{
+    width: 46.5%;
+}
+
+@media screen and (max-width: 1201px) {
+    .form-group_in{
+        width: 54.5%;
+    }
+}
+@media screen and (max-width: 901px) {
+    .form-group_in{
+        width: 45%;
+    }
+
+}
+/* 设置了浏览器宽度不大于901px时  */
+
+@media screen and (max-width: 500px) {
+    .form-group_in{
+        width: 80.5%;
+    }
+
+}
+
+
+/*  file 修饰 */
+.file {
+    position: relative;
+    /*display: inline-block;*/
+    background: #0A649E;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    /*padding: 4px -12px;*/
+    overflow: hidden;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 15px;
+}
+@media screen and (max-width: 500px) {
+    .file{
+        width: 81%; margin-left: -50px;
+    }
+
+}
+.file input {
+    /* position: absolute;
+     font-size: 100px;*/
+    right: 0;
+    top: 0;
+    opacity: 0;
+    margin-top: -12px;;
+}
+.file:hover {
+    background: #AADFFD;
+    border-color: #78C3F3;
+    color: #004974;
+    text-decoration: none;
+}
+
+/* file 修饰 解释*/
+
+

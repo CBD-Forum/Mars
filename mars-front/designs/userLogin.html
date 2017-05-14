@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>userLogin</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/userLogin.css">
+</head>
+<body>
+<div class="userlog_background" >
+    <img src="images/userbackground.jpg" />
+</div>
+<header class="container-fluid navbar-fixed-top user_top  ">
+    <div class="userLogin_top">
+        <div class="text-center ">
+            <h2>火星银行星火路支行</h2>
+        </div>
+
+    </div>
+</header>
+<!--top 结束！-->
+
+<div class="container userLogin_body" >
+    <div class="text-center  " >
+        <div  class="form-group_in userLogin_body_in " >
+            <input  type="text" class="form-control" placeholder="文本输入">
+        </div>
+        <!--<input style=""  class="btn-success btn form-group_inn   " type="file" onchange="pickcert(this.files)" />-->
+        <H4 href="javascript:;" class="file btn  btn-success " style="font-size: 20px; ">选择文件
+            <input style="margin-top: -20px; color: #ffffff; " type="file" name=""  onchange="pickcert(this.files)">
+        </H4>
+    </div>
+    <!--  测试点击跳转  -->
+    <button class="btn btn-success text-center" onclick=window.open("userFinancialProductsPurchase.html")>
+        点击跳转
+    </button>
+    <!--  测试点击跳转  -->
+</div>
+
+
+</body>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+function pickcert(files) {
+    if (files.length) {
+        const file = files[0];
+        const reader = new FileReader();//new一个FileReader实例
+        reader.readAsText(file);
+        reader.onload = function () {
+            cert = this.result;
+            console.log("cert content:" + cert)
+        }
+    }
+}</script>
+</html>
+

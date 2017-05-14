@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>银行理财销售列表</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/userFinancialProductsPurchase.css">
+
+</head>
+<body>
+<div class="userlog_background">
+    <img src="/images/bankFinancialSalesList.jpg" alt="">
+</div>
+<header class="container-fluid navbar-fixed-top user_top  ">
+    <div class="userLogin_top">
+        <div class="text-center col-md-6  col-sm-6 col-xs-6">
+            <h2>{{ session.login_bank }} - 后台管理</h2>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-3">
+            <p class="btn btn-success" style="color: white;" onclick="window.location =('/bank/sales')">理财产品销售</p>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-3">
+            <p class="btn btn-success" style="color: white;" onclick="window.location = ('/bank/approval')">质押审批</p>
+        </div>
+    </div>
+</header>
+<!--top 结束！-->
+<div class="userFinancialProductsPurchase_body ">
+    <div class="row text-center">
+        <div class="ufpp_body_h container text-center">
+            <img class="img-rounded" src="/images/buybtnb.png" alt="">
+            <h2 class="text-center">理财销售列表</h2>
+        </div>
+        <div class=" container-fluid container">
+            <div class="col-md-3 col-sm-3 col-xs-3 uFPP_b">
+                <h4>交易单号</h4>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-3 uFPP_b">
+                <h4>用户</h4>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-3 uFPP_b">
+                <h4>理财产品名称</h4>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-3 uFPP_b">
+                <h4>已支付产品价格（万元）</h4>
+            </div>
+        </div>
+    </div>
+    <!-- 数据  -->
+    {% for fp in purchase_record %}
+    <div class=" text-center container ">
+        <div class="col-md-3 col-sm-3 col-xs-3 uFPP_bb">
+            <h4>{{ fp._id.toHexString() }}</h4>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-3 uFPP_bb">
+            <h4>{{ fp.User }}</h4>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-3 uFPP_bb">
+            <h4>{{ fp.FinancialProductName }}</h4>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-3 uFPP_bb">
+            <h4>35</h4>
+        </div>
+        
+    </div>
+    {% endfor %}
+    <div class=" text-center container ">
+        <div class="uFPP_bbb text-center container col-md-12 "></div>
+    </div>
+</div>
+
+</body>
+</html>

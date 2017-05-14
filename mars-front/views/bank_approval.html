@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>银行质押审核</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/userFinancialProductsPurchase.css">
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/plugins/layer/layer.js"></script>
+</head>
+<body>
+<div class="userlog_background">
+    <img src="/images/bankMortgageList.png" alt="">
+</div>
+<header class="container-fluid navbar-fixed-top user_top  ">
+    <div class="userLogin_top">
+        <div class="text-center col-md-6  col-sm-6 col-xs-6">
+            <h2>{{ session.login_bank }} - 后台管理</h2>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-3">
+            <p class="btn btn-success" style="color: white;" onclick="window.location =('/bank/sales')">理财产品销售</p>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-3">
+            <p class="btn btn-success" style="color: white;" onclick="window.location = ('/bank/approval')">质押审批</p>
+        </div>
+    </div>
+</header>
+<!--top 结束！-->
+<div class="userFinancialProductsPurchase_body">
+    <div class="row text-center">
+        <div class="ufpp_body_h container text-center">
+            <img class="img-rounded" src="/images/buybtnb.png" alt="">
+            <h2 class="text-center">质押审批</h2>
+        </div>
+        <div style="padding-left:20%;padding-top:20px;" ;>
+            <table class="table table-bordered text-center" style="width:80%;">
+                <tr>
+                    <td class=""><h4>产品编号</h4></td>
+                    <td class=""><h4>用户</h4></td>
+                    <td class=""><h4>产品金额（万元）</h4></td>
+                    <td class=""><h4>质押金额（万元）</h4></td>
+                    <td class=""><h4>审核状态</h4></td>
+                    <td class=""><h4>审批操作</h4></td>
+                </tr>
+                {% for mr in mortgage_records %}
+                <tr>
+                    <td class=""><h4>{{ mr.PID }}</h4></td>
+                    <td class=""><h4>{{ mr.User }}</h4></td>
+                    <td class=""><h4>{{ mr.FAmount }}</h4></td>
+                    <td class=""><h4>{{ mr.MAmount}}</h4></td>
+
+                    {% if mr.Status==1 %}
+                    <td class=""><h4> 待审核</h4></td>
+                    <td style="vertical-align: inherit;">
+                        <button onclick="approval('{{ mr._id }}','{{ mr.MID }}','2')" class="btn btn-info "
+                                id="approval-ok">通过
+                        </button>
+                        <button type="button" class="btn btn-danger">拒绝</button>
+                    </td>
+                    {% else %}
+                    <td><h4>已审核通过</h4></td>
+                    <td class="">
+                    </td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<script type="text/javascript">
+
+    function approval(mid, txid, status) {
+        layer.load();
+        $("#approval-ok").attr({"disabled": "disabled"});
+        $.post("/api/mortgage_records/approval",
+            {
+                mid: mid,
+                txid: txid,
+                status: status
+            },
+            function (data, status) {
+                layer.closeAll('loading');
+                if (data.status == 'SUCCESS') {
+                    layer.msg("操作成功！", {
+                        time: 2000 //2秒关闭（如果不配置，默认是3秒）
+                    }, function () {
+                        location.reload();
+                    });
+                }
+            });
+    }
+</script>
+</html>

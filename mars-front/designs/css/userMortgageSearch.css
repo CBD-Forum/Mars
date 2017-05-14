@@ -1,0 +1,51 @@
+input{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+@media screen and (max-width: 901px) {
+    input{
+        padding:0;
+
+    }
+}
+.userMortgageSearch{
+    margin-top: 10%;
+    margin-right: 3%;
+}
+
+.userMortgageSearch input{
+    background-color: #02406D;
+    color: #ffffff;
+    height: 45px;
+    margin-top: -5px;
+    font-size: 16px;
+}
+
+.userMortgageSearch label{
+    color: #ffffff;
+    padding-top: 5px;
+    font-size: 20px;
+}
+@media screen and (max-width: 901px) {
+    .userMortgageSearch label{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .userMortgageSearch label{
+        font-size: 10px;
+
+    }
+}
+
+.umh_bord{
+    border-top:solid 1px #ffffff;
+    border-left:solid 1px #ffffff;
+    border-right: solid 1px #ffffff;
+}
+.umh_bordd{
+    border-bottom:solid 1px #ffffff;
+}
+.umh_bord_m{
+    margin-top: 45px;
+}

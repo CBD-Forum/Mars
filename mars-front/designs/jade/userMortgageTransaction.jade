@@ -1,0 +1,87 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    |     
+    title userMortgageTransaction
+    |     
+    link(rel='stylesheet', href='css/bootstrap.min.css')
+    |     
+    link(rel='stylesheet', href='css/userFinancialProductsPurchase.css')
+    |     
+    link(rel='stylesheet', href='css/userMortgageSearch.css')
+  body
+    .userlog_background
+      img(src='images/userMortgageTransaction.jpg', alt='')
+    header.container-fluid.navbar-fixed-top.user_top
+      .userLogin_top
+        .text-center.col-md-8.col-sm-8.col-xs-6
+          h2 &#x706B;&#x661F;&#x94F6;&#x884C;&#x661F;&#x706B;&#x8DEF;&#x652F;&#x884C;
+        |         
+        .col-md-1.col-sm-1.col-xs-2
+          p.btn.btn-success &#x7406;&#x8D22;
+        |         
+        .col-md-1.col-sm-1.col-xs-2
+          p.btn.btn-success &#x62B5;&#x62BC;
+        |         
+        .col-md-1.col-sm-1.col-xs-2
+          p.btn.btn-success &#x8D37;&#x6B3E;
+    // top 结束！
+    .userFinancialProductsPurchase_body
+      .row.text-center
+        .ufpp_body_h.container.text-center
+          img.img-rounded(src='images/buybtnb.png', alt='')
+          |             
+          h2.text-center &#x62B5;&#x62BC;&#x8BE6;&#x7EC6;&#x9875;&#x9762;
+        |         
+        .container-fluid.container
+          .col-md-3.col-sm-3.col-xs-3.uFPP_b
+            h4 &#x7406;&#x8D22;&#x5355;&#x53F7;
+          |             
+          .col-md-2.col-sm-2.col-xs-2.uFPP_b
+            h4 &#x5DF2;&#x8D2D;&#x4E70;&#x7684;&#x7406;&#x8D22;&#x7F16;&#x53F7;
+          |             
+          .col-md-2.col-sm-2.col-xs-2.uFPP_b
+            h4 &#x5DF2;&#x8D2D;&#x4E70;&#x7684;&#x7406;&#x8D22;&#x4EA7;&#x54C1;&#x540D;&#x79F0;
+          |             
+          .col-md-3.col-sm-3.col-xs-3.uFPP_b
+            h4 &#x5DF2;&#x652F;&#x4ED8;&#x4EA7;&#x54C1;&#x4EF7;&#x683C;&#xFF08;&#x4E07;&#x5143;&#xFF09;
+          |             
+          .col-md-2.col-sm-2.col-xs-2.uFPP_b
+            h4 &#x5E74;&#x5316;&#x6536;&#x76CA;
+      |     
+      .text-center.container
+        .col-md-3.col-sm-3.col-xs-3.uFPP_bb
+          h4
+            | 0000000000000001
+            // 00000587801197bf70baef144bba6dfb533621f304b541df8c
+        |         
+        .col-md-2.col-sm-2.col-xs-2.uFPP_bb
+          h4 20170001
+        |         
+        .col-md-2.col-sm-2.col-xs-2.uFPP_bb
+          h4 &#x706B;&#x661F;&#x7406;&#x8D22;&#x58F9;&#x53F7;A
+        |         
+        .col-md-3.col-sm-3.col-xs-3.uFPP_bb
+          h4 35
+        |         
+        .col-md-2.col-sm-2.col-xs-2.uFPP_bb
+          h4 6.21%
+        |         
+        .uFPP_bbb.text-center.col-md-12.col-sm-12
+      // 空的div 添加下划线
+      // 
+      .userMortgageTransaction.userMortgageSearch
+        div
+          .col-md-3.col-sm-3.col-xs-3.text-right
+            label &#x7406;&#x8D22;&#x5355;&#x53F7;&#xFF1A;
+          |             
+          .col-md-5.col-sm-5.col-xs-5
+            input.form-control(type='text', value='00000587801197bf70baef144bba6dfb533621f304b541df8c')
+          |             
+          .col-md-3.col-sm-3.col-xs-2.text-left
+            button.btn.btn-success &#x67E5;&#x8BE2;
+    // 测试点击跳转
+    button.btn.btn-success.text-center(onclick='window.open("bankFinancialSalesList.html")')
+      | &#x70B9;&#x51FB;&#x8DF3;&#x8F6C;
+    // 测试点击跳转

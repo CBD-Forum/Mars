@@ -1,0 +1,91 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    |     
+    title userFinancialProductsPurchase
+    |     
+    link(rel='stylesheet', href='css/bootstrap.min.css')
+    |     
+    link(rel='stylesheet', href='css/userFinancialProductsPurchase.css')
+  body
+    .userlog_background
+      img(src='images/userFinancialProductsPurchase.png', alt='')
+    header.container-fluid.navbar-fixed-top.user_top
+      .userLogin_top
+        .text-center.col-md-8.col-sm-8.col-xs-6
+          h2 &#x706B;&#x661F;&#x94F6;&#x884C;&#x661F;&#x706B;&#x8DEF;&#x652F;&#x884C;
+        |         
+        .col-md-1.col-sm-1.col-xs-2
+          p.btn.btn-success &#x7406;&#x8D22;
+        |         
+        .col-md-1.col-sm-1.col-xs-2
+          p.btn.btn-success &#x62B5;&#x62BC;
+        |         
+        .col-md-1.col-sm-1.col-xs-2
+          p.btn.btn-success &#x8D37;&#x6B3E;
+    // top 结束！
+    .userFinancialProductsPurchase_body
+      .row.text-center
+        .ufpp_body_h.container.text-center
+          img.img-rounded(src='images/buybtnb.png', alt='')
+          |                
+          h2.text-center &#x7528;&#x6237;&#x4EA7;&#x54C1;&#x8D2D;&#x4E70;&#x9875;&#x9762;
+        |         
+        .container
+          .col-md-2.col-sm-2.col-xs-2.uFPP_b
+            h3 &#x7406;&#x8D22;&#x7F16;&#x53F7;
+          |            
+          .col-md-4.col-sm-4.col-xs-4.uFPP_b
+            h3 &#x7406;&#x8D22;&#x4EA7;&#x54C1;&#x540D;&#x79F0;
+          |            
+          .col-md-2.col-sm-2.col-xs-2.uFPP_b
+            h3 &#x4EA7;&#x54C1;&#x4EF7;&#x683C;&#xFF08;&#x4E07;&#x5143;&#xFF09;
+          |            
+          .col-md-2.col-sm-2.col-xs-2.uFPP_b
+            h3 &#x5E74;&#x5316;&#x6536;&#x76CA;
+          |            
+          .col-md-2.col-sm-2.col-xs-2.uFPP_b
+            h3 &#x8D2D;&#x4E70;&#x64CD;&#x4F5C;
+      // 数据1
+      .text-center.container
+        .col-md-2.col-sm-2.col-xs-2.uFPP_bb
+          h4 20170001
+        |         
+        .col-md-4.col-sm-4.col-xs-4.uFPP_bb
+          h4 &#x706B;&#x661F;&#x7406;&#x8D22;&#x58F9;&#x53F7;A
+        |         
+        .col-md-2.col-sm-2.col-xs-2.uFPP_bb
+          h4 35
+        |         
+        .col-md-2.col-sm-2.col-xs-2.uFPP_bb
+          h4 6.21%
+        |         
+        .col-md-2.col-sm-2.col-xs-2.uFPP_bb
+          h4.btn.btn-success &#x8D2D;&#x4E70;
+          // class="uFPP_bb_btn"
+      // 数据1
+      // 数据2 ！
+      .text-center.container
+        .col-md-2.col-sm-2.col-xs-2.uFPP_bb
+          h4 20170002
+        |          
+        .col-md-4.col-sm-4.col-xs-4.uFPP_bb
+          h4 &#x706B;&#x661F;&#x7406;&#x8D22;&#x58F9;&#x53F7;B
+        |          
+        .col-md-2.col-sm-2.col-xs-2.uFPP_bb
+          h4 5
+        |          
+        .col-md-2.col-sm-2.col-xs-2.uFPP_bb
+          h4 4.56%
+        |          
+        .col-md-2.col-sm-2.col-xs-2.uFPP_bb
+          h4.btn.btn-success &#x8D2D;&#x4E70;
+        |         
+        .uFPP_bbb.text-center.col-md-12
+      // 数据2
+      // 加最下面的横线
+    // 测试点击跳转
+    button.btn.btn-success.text-center(onclick='window.open("userFinancialProductsConfirm.html")')
+      | &#x70B9;&#x51FB;&#x8DF3;&#x8F6C;
+    // 测试点击跳转
