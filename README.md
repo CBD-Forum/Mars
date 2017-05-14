@@ -26,7 +26,10 @@ They have a story.
 作品使用HyperLedger Fabric 1.0搭建联盟链，联盟链的参与方为各银行的理财部门与贷款部门，将理财产品信息与抵押份额信息上链，节省跨行业务中的信任传递与校验。同时，出于数据隐私性的考虑，在业务层对数据进行加密处理。
 
 在此实现下，理财产品发行行提高了理财产品的竞争力，理财产品投资者提高了理财产品的流动性，理财产品贷款受理行提高了资金的使用效率。
-    
+    
+## Architecture
+
+![Link here](2002207527.jpg "Architecture")
 
 ## Link
 Frontend [Link here](mars-front "Front")
